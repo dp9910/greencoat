@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenAgroFood</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container">
+      <p class="brand">GreenAgroFood</p>
+      <h1>AI-Accelerated Material Discovery for Greenhouse Films</h1>
+      <p class="subtitle">Designing a spectral coating that doesn't exist &mdash; before spending a dollar in the lab.</p>
+    </div>
+  </header>
+
+  <!-- Problem -->
+  <section class="section section--problem">
+    <div class="container">
+      <h2>The Problem</h2>
+      <p>Sunlight reaching a greenhouse is roughly 5% UV, 43% PAR (the light plants use), and <strong>52% near-infrared (NIR)</strong>. That NIR passes straight through conventional plastic film and converts entirely to heat inside the structure.</p>
+
+      <!-- Sunlight spectrum diagram -->
+      <div class="spectrum-diagram">
+        <div class="spectrum-bar uv" style="flex:0.05;">
+          <span class="spectrum-label">UV</span>
+          <span class="spectrum-pct">5%</span>
+        </div>
+        <div class="spectrum-bar par" style="flex:0.43;">
+          <span class="spectrum-label">PAR</span>
+          <span class="spectrum-pct">43%</span>
+        </div>
+        <div class="spectrum-bar nir" style="flex:0.52;">
+          <span class="spectrum-label">NIR</span>
+          <span class="spectrum-pct">52%</span>
+        </div>
+      </div>
+      <p class="spectrum-caption">Composition of incoming solar radiation</p>
+
+      <p>Removing that heat with HVAC accounts for <strong>25&ndash;40% of total greenhouse operating cost</strong>. Growers are paying to cool down energy they never needed in the first place.</p>
+    </div>
+  </section>
+
+  <!-- Solution -->
+  <section class="section section--solution">
+    <div class="container">
+      <h2>The Film Solution</h2>
+      <p>We are developing a nanoparticle-based coating applied to standard greenhouse plastic that <strong>transmits only PAR</strong> (the wavelengths plants photosynthesise with) while <strong>reflecting NIR before it ever enters the structure</strong>.</p>
+
+      <!-- Film diagram -->
+      <div class="film-diagram">
+        <div class="film-diagram__sun">
+          <svg viewBox="0 0 80 80" width="64" height="64">
+            <circle cx="40" cy="40" r="18" fill="#fbbf24"/>
+            <g stroke="#fbbf24" stroke-width="3" stroke-linecap="round">
+              <line x1="40" y1="6" x2="40" y2="16"/>
+              <line x1="40" y1="64" x2="40" y2="74"/>
+              <line x1="6" y1="40" x2="16" y2="40"/>
+              <line x1="64" y1="40" x2="74" y2="40"/>
+              <line x1="16" y1="16" x2="23" y2="23"/>
+              <line x1="57" y1="57" x2="64" y2="64"/>
+              <line x1="64" y1="16" x2="57" y2="23"/>
+              <line x1="16" y1="64" x2="23" y2="57"/>
+            </g>
+          </svg>
+          <span>Sunlight</span>
+        </div>
+
+        <div class="film-diagram__arrows">
+          <div class="film-diagram__arrow film-diagram__arrow--par">
+            <span class="arrow-down"></span>
+            <span class="arrow-label">PAR passes through</span>
+          </div>
+          <div class="film-diagram__arrow film-diagram__arrow--nir">
+            <span class="arrow-up"></span>
+            <span class="arrow-label">NIR reflected back</span>
+          </div>
+        </div>
+
+        <div class="film-diagram__film">Spectral&nbsp;Film&nbsp;Coating</div>
+
+        <div class="film-diagram__greenhouse">
+          <svg viewBox="0 0 120 80" width="120" height="80">
+            <path d="M10 70 L10 35 Q60 0 110 35 L110 70 Z" fill="none" stroke="#16a34a" stroke-width="3"/>
+            <line x1="10" y1="70" x2="110" y2="70" stroke="#16a34a" stroke-width="3"/>
+            <line x1="60" y1="10" x2="60" y2="70" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="4"/>
+            <circle cx="35" cy="58" r="6" fill="#22c55e"/>
+            <line x1="35" y1="52" x2="35" y2="65" stroke="#16a34a" stroke-width="2"/>
+            <circle cx="60" cy="50" r="8" fill="#22c55e"/>
+            <line x1="60" y1="42" x2="60" y2="65" stroke="#16a34a" stroke-width="2"/>
+            <circle cx="85" cy="55" r="7" fill="#22c55e"/>
+            <line x1="85" y1="48" x2="85" y2="65" stroke="#16a34a" stroke-width="2"/>
+          </svg>
+          <span>Cooler greenhouse, healthy plants</span>
+        </div>
+      </div>
+
+      <ul class="check-list">
+        <li>Cooler greenhouse &mdash; no extra cooling system needed</li>
+        <li>Same or better plant growth (PAR fully transmitted)</li>
+        <li>UV block provides pest control as a free co-benefit</li>
+        <li>Precise 750 nm cutoff preserves far-red light plants need</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- AI Approach -->
+  <section class="section section--approach">
+    <div class="container">
+      <h2>AI-Guided Discovery</h2>
+      <p>Instead of years of trial-and-error at the lab bench, we use AI trained on crystal structures, quantum physics, and optical spectra to <strong>screen 100,000+ candidate materials virtually</strong> &mdash; before synthesising a single one.</p>
+
+      <div class="pipeline">
+        <div class="pipeline__step">
+          <div class="pipeline__icon">1</div>
+          <h3>Build the Library</h3>
+          <p>Pull every known NIR-absorbing material from databases like the Materials Project (150,000+ compounds).</p>
+        </div>
+        <div class="pipeline__connector"></div>
+        <div class="pipeline__step">
+          <div class="pipeline__icon">2</div>
+          <h3>Encode as Fingerprints</h3>
+          <p>Each material is described numerically &mdash; elements, crystal structure, electron arrangement &mdash; like a chemical barcode.</p>
+        </div>
+        <div class="pipeline__connector"></div>
+        <div class="pipeline__step">
+          <div class="pipeline__icon">3</div>
+          <h3>Simulate, Don't Synthesise</h3>
+          <p>A quantum-mechanics simulation (DFT) predicts the full optical spectrum of each candidate from first principles. No spectrometer needed.</p>
+        </div>
+        <div class="pipeline__connector"></div>
+        <div class="pipeline__step">
+          <div class="pipeline__icon">4</div>
+          <h3>Rank &amp; Shortlist</h3>
+          <p>A trained model ranks all candidates on NIR block, PAR transmission, stability, and dispersibility. The chemist walks into the lab with 5&ndash;8 winners &mdash; not 500.</p>
+        </div>
+      </div>
+
+      <!-- Old vs New comparison -->
+      <div class="comparison">
+        <div class="comparison__card comparison__card--old">
+          <h3>Traditional Approach</h3>
+          <p>Synthesise &rarr; characterise &rarr; reformulate &rarr; repeat. 50&ndash;200 iterations over <strong>years</strong> before a viable candidate emerges.</p>
+        </div>
+        <div class="comparison__vs">vs</div>
+        <div class="comparison__card comparison__card--new">
+          <h3>AI-Guided Approach</h3>
+          <p>Screen 100,000 candidates computationally in weeks. Synthesise only the top 8. <strong>Months instead of years. A fraction of the cost.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Validation -->
+  <section class="section section--validation">
+    <div class="container">
+      <h2>Field Validation</h2>
+      <p>Once the top film candidates are synthesised, we validate performance with controlled hoophouse tunnel trials &mdash; comparing our AI-designed films against a plain control and the best incumbent product on the market.</p>
+
+      <div class="tunnels">
+        <div class="tunnel">
+          <div class="tunnel-icon">
+            <svg viewBox="0 0 80 60" width="80" height="60">
+              <path d="M5 55 L5 25 Q40 0 75 25 L75 55 Z" fill="none" stroke="#94a3b8" stroke-width="2.5"/>
+              <line x1="5" y1="55" x2="75" y2="55" stroke="#94a3b8" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <strong>Control</strong>
+          <span>Plain LDPE baseline</span>
+        </div>
+        <div class="tunnel">
+          <div class="tunnel-icon">
+            <svg viewBox="0 0 80 60" width="80" height="60">
+              <path d="M5 55 L5 25 Q40 0 75 25 L75 55 Z" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+              <line x1="5" y1="55" x2="75" y2="55" stroke="#f59e0b" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <strong>Benchmark</strong>
+          <span>Best incumbent film</span>
+        </div>
+        <div class="tunnel">
+          <div class="tunnel-icon">
+            <svg viewBox="0 0 80 60" width="80" height="60">
+              <path d="M5 55 L5 25 Q40 0 75 25 L75 55 Z" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+              <line x1="5" y1="55" x2="75" y2="55" stroke="#16a34a" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <strong>AI Films A&ndash;C</strong>
+          <span>Varied loadings &amp; additives</span>
+        </div>
+      </div>
+      <p class="tunnels-caption">Weekly measurement of air temperature, plant growth, soil moisture, and total biomass at harvest.</p>
+    </div>
+  </section>
+
+  <!-- Beyond Greenhouses -->
+  <section class="section section--beyond">
+    <div class="container">
+      <h2>Beyond Greenhouses</h2>
+      <p>NIR rejection on a greenhouse film and NIR rejection on a building envelope are the <strong>same optics problem</strong>. The identical material and discovery pipeline can address:</p>
+
+      <div class="applications">
+        <div class="app-card">
+          <div class="app-icon">
+            <svg viewBox="0 0 64 64" width="48" height="48">
+              <rect x="12" y="20" width="40" height="34" rx="2" fill="none" stroke="#6366f1" stroke-width="3"/>
+              <line x1="12" y1="20" x2="32" y2="8" stroke="#6366f1" stroke-width="3"/>
+              <line x1="52" y1="20" x2="32" y2="8" stroke="#6366f1" stroke-width="3"/>
+              <rect x="22" y="30" width="8" height="8" rx="1" fill="#6366f1" opacity="0.3"/>
+              <rect x="34" y="30" width="8" height="8" rx="1" fill="#6366f1" opacity="0.3"/>
+              <rect x="22" y="42" width="8" height="8" rx="1" fill="#6366f1" opacity="0.3"/>
+              <rect x="34" y="42" width="8" height="8" rx="1" fill="#6366f1" opacity="0.3"/>
+            </svg>
+          </div>
+          <h3>Building Envelope Coatings</h3>
+          <p>NIR-reflective coatings on roofs and walls to reduce cooling load for commercial and industrial buildings.</p>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">
+            <svg viewBox="0 0 64 64" width="48" height="48">
+              <rect x="8" y="16" width="48" height="38" rx="3" fill="none" stroke="#6366f1" stroke-width="3"/>
+              <line x1="8" y1="44" x2="56" y2="44" stroke="#6366f1" stroke-width="2"/>
+              <rect x="16" y="24" width="14" height="14" rx="2" fill="#6366f1" opacity="0.3"/>
+              <rect x="34" y="24" width="14" height="14" rx="2" fill="#6366f1" opacity="0.3"/>
+              <circle cx="32" cy="50" r="2" fill="#6366f1"/>
+            </svg>
+          </div>
+          <h3>Data Centre Cooling</h3>
+          <p>Data centres spend ~40% of energy on cooling. The same film applied to envelopes and glazing cuts solar heat gain passively.</p>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">
+            <svg viewBox="0 0 64 64" width="48" height="48">
+              <rect x="10" y="14" width="44" height="40" rx="2" fill="none" stroke="#6366f1" stroke-width="3"/>
+              <line x1="10" y1="26" x2="54" y2="26" stroke="#6366f1" stroke-width="2"/>
+              <line x1="10" y1="38" x2="54" y2="38" stroke="#6366f1" stroke-width="2"/>
+              <line x1="28" y1="14" x2="28" y2="54" stroke="#6366f1" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Window Film Retrofit</h3>
+          <p>Retrofit existing glazing with spectrally-selective NIR-blocking film &mdash; same formulation, standard application.</p>
+        </div>
+      </div>
+      <p class="beyond-note">Same material. Same discovery pipeline. Zero additional R&D.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>GreenAgroFood</p>
+    </div>
+  </footer>
+
+</body>
+</html>
